@@ -16,7 +16,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/libflow
   SECTION:=libs
   CATEGORY:=Libraries
-  DEPENDS:=+libc +libpthread +libm +librt +libgnutls
+  DEPENDS:=+libc +libpthread +librt +libgnutls
   TITLE:=FlowCloud Core and Messaging Libraries by Imagination
 endef
 
