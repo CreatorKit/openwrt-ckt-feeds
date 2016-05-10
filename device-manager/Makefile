@@ -21,7 +21,7 @@ define Package/device-manager
   SECTION:=utils
   CATEGORY:=Utilities
   DEFAULT:=n
-  DEPENDS:=+awalwm2m +ubus +ubox
+  DEPENDS:=+awalwm2m +ubus +ubox +tayga
   TITLE:=Device manager
   MENU:=1
 endef
