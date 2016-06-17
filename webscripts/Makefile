@@ -22,7 +22,7 @@ define Package/webscripts
 	SECTION:=utils
 	CATEGORY:=Utilities
 	DEFAULT:=n
-	DEPENDS:= +lua-wsapi-base +cgilua +libubus-lua +lua-coxpcall
+	DEPENDS:= +lua-wsapi-base +cgilua +libubus-lua +lua-coxpcall +libuci-lua
 	TITLE:=webscripts
 endef
 
