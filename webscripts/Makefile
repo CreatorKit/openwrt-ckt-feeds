@@ -5,7 +5,7 @@ PKG_VERSION:=0.9.1
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=$(TOPDIR)/../../packages/webscripts
+PKG_SOURCE_URL:=https://github.com/CreatorKit/webscripts.git
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_VERSION:=$(PKG_VERSION)
