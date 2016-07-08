@@ -6,7 +6,7 @@ PKG_RELEASE:=1
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=$(TOPDIR)/../../packages/button-gateway
+PKG_SOURCE_URL:=https://github.com/CreatorKit/button-gateway.git
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_VERSION:=$(PKG_VERSION)
