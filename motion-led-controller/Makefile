@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=light-controller
+PKG_NAME:=motion-led-controller
 PKG_VERSION:=HEAD
 PKG_RELEASE:=1
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=$(TOPDIR)/../../packages/light-controller
+PKG_SOURCE_URL:=$(TOPDIR)/../../packages/motion-led-controller
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_VERSION:=$(PKG_VERSION)
@@ -19,15 +19,15 @@ CMAKE_OPTIONS += -DSTAGING_DIR=$(STAGING_DIR)
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
-define Package/light-controller
+define Package/motion-led-controller
   SECTION:=utils
   CATEGORY:=Utilities
   DEPENDS:= +awalwm2m
-  TITLE:=Light Controller app
+  TITLE:=Motion Led Controller app
 endef
 
-define Package/light-controller/description
-  Imagination Technologies lightcontroller app
+define Package/motion-led-controller/description
+  Imagination Technologies motion-led controller app
 endef
 
 define Build/Compile
@@ -38,14 +38,14 @@ define Build/Clean
 	$(call Build/Compile/Default,clean)
 endef
 
-define Package/light-controller/install
+define Package/motion-led-controller/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/* $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/set_led.sh $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/light_controller_continuous.sh $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/motion_led_controller_continuous.sh $(1)/usr/bin
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/light_controller_appd $(1)/etc/init.d/
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/light_controller_continuousd $(1)/etc/init.d/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/motion_led_controller_appd $(1)/etc/init.d/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/motion_led_controller_continuousd $(1)/etc/init.d/
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
