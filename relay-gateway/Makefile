@@ -22,7 +22,7 @@ include $(INCLUDE_DIR)/cmake.mk
 define Package/relay-gateway
   SECTION:=utils
   CATEGORY:=Utilities
-  DEPENDS:= +awalwm2m
+  DEPENDS:= +awalwm2 +libconfig
   TITLE:=Relay gateway app
 endef
 
@@ -40,12 +40,12 @@ endef
 
 define Package/relay-gateway/install
 	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/* $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/export_gpio.sh $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/relay_gateway_continuous.sh $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/relay_gateway.cfg $(1)/etc/config
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/relay_gateway_appd $(1)/etc/init.d/
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/relay_gateway_continuousd $(1)/etc/init.d/
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
