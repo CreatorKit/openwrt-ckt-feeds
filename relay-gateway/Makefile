@@ -22,7 +22,7 @@ include $(INCLUDE_DIR)/cmake.mk
 define Package/relay-gateway
   SECTION:=utils
   CATEGORY:=Utilities
-  DEPENDS:= +awalwm2 +libconfig
+  DEPENDS:= +awalwm2m +libconfig
   TITLE:=Relay gateway app
 endef
 
