@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=relay-gateway
-PKG_VERSION:=HEAD
+PKG_VERSION:=0.9.5
 PKG_RELEASE:=1
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=$(TOPDIR)/../../packages/relay-gateway
+PKG_SOURCE_URL:=https://github.com/CreatorKit/relay-gateway.git
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_VERSION:=$(PKG_VERSION)
