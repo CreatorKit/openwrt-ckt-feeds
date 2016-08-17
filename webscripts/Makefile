@@ -43,13 +43,14 @@ define Package/webscripts/install
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/* $(1)/usr/bin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/data/cgilua $(1)/usr/bin/
 	$(INSTALL_DIR) $(1)/www/
+	$(INSTALL_DIR) $(1)/www/webscripts/
 	$(INSTALL_DIR) $(1)/www/cgi-bin/
 	$(INSTALL_DIR) $(1)/www/css/
 	$(INSTALL_DIR) $(1)/www/javascript/
 	$(INSTALL_DIR) $(1)/www/image/
 	$(INSTALL_DIR) $(1)/etc/lwm2m/
 	$(INSTALL_BIN) files/* $(1)/etc/lwm2m/
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ipkg-install/var/www/index.html $(1)/www/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ipkg-install/var/www/index.html $(1)/www/webscripts/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ipkg-install/var/www/cgi-bin/* $(1)/www/cgi-bin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ipkg-install/var/www/css/* $(1)/www/css/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ipkg-install/var/www/javascript/* $(1)/www/javascript/
