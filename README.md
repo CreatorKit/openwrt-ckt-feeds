@@ -16,9 +16,9 @@ Command                                         | Description
 ```$ ./scripts/feeds/install device-manager```  | Install only the package device-manager
 
 
-### Building these packages sing pre-compiled OpenWrt SDK:
+### Building these packages using pre-compiled OpenWrt SDK for Ci40 (Marduk):
 
-1. First download the https://downloads.creatordev.io/pistachio/marduk/OpenWrt-SDK-0.9.4-pistachio-marduk_gcc-5.2.0_musl-1.1.11.Linux-x86_64.tar.bz.
+1. First download the SDK from https://downloads.creatordev.io/pistachio/marduk/OpenWrt-SDK-0.9.4-pistachio-marduk_gcc-5.2.0_musl-1.1.11.Linux-x86_64.tar.bz.
 2. Extract the SDK and go to the extracted folder.
 3. Check the feeds.conf.default whether its having an entry to this https://github.com/CreatorKit/openwrt-ckt-feeds.git
 4. Update and install the openwrt-ckt-feeds by 
