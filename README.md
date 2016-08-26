@@ -28,7 +28,7 @@ Command                                         | Description
 
           ./scripts/feeds update ckt
           ./scripts/feeds install ckt
-5. You can build a specific package from the list above by
+5. You can build a specific package from the above list
 
           make package/xyz/compile
 6. Once its built successfully, the generated .ipk files are placed in the bin/pistachio directory.
