@@ -31,20 +31,19 @@ Command                                         | Description
 5. You can build a specific package from the above list
 
           make package/xyz/compile
-6. Once its built successfully, the generated .ipk files are placed in the bin/pistachio directory.
-7. You can either scp that ipk file to the Ci40 board running https://github.com/Creatordev/openwrt image or copy into USB stick and connect it to the board.
+6. Once the package is built successfully, it's .ipk files are generated in the bin/pistachio directory.
+7. To copy the .ipk files on to the Ci40 board which is running the CreatorDev/openwrt image, you can either scp them or first copy them on a USB stick, connect the stick to the board, mount it and copy the files in /tmp folder.
 8. You can install the ipk by using 
 
           root@OpenWrt:/# opkg install /tmp/xyz.ipk
-9. For more details about how to use openwrt sdk please refer https://wiki.openwrt.org/doc/howto/obtain.firmware.sdk
-10. However if this package requires some more dependent packages, then those have to be installed first, then only this package can be installed via opkg. Since SDK is a stripped down version, Package.gz is not getting generated and opkg update would fail.
-11. e.g. if you want change something in say "button-led-controller", then it would be good to install the default "button-led-controller" using opkg on the Vanila CreatorDev/Openwrt image first. i.e.
+9. However, please note that if a package requires some dependent packages, then those need to be installed first, only then a package can be installed using opkg. Since SDK is a stripped down version, Package.gz is not getting generated and opkg update would fail.
+10. e.g. if you want change something in say "button-led-controller", then it would be good to install the default "button-led-controller" using opkg on the Vanila CreatorDev/Openwrt image first. i.e.
 
           root@OpenWrt:/# opkg update
           root@OpenWrt:/# opkg install button-led-controller
-11. Now since you need to install your own version of "button-led-controller", you can remove this one (it will keep intact the dependent packages though) and install your ipk.
+11. Now,to install your own version of "button-led-controller", you can remove the default version (it will keep intact the dependent packages though) and install your version.
 
           root@OpenWrt:/# opkg remove
           root@OpenWrt:/# opkg install /tmp/button-led-controller_HEAD-1_pistachio.ipk
 You can follow this approach for building any other packages using OpenWrt SDK.
-
+12. For more details about how to use openwrt sdk please refer https://wiki.openwrt.org/doc/howto/obtain.firmware.sdk
