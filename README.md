@@ -18,7 +18,7 @@ Command                                         | Description
 
 ### Building CreatorKit packages using pre-compiled OpenWrt SDK for Ci40 (Marduk):
 
-1. First download the SDK from https://downloads.creatordev.io/pistachio/marduk/OpenWrt-SDK-0.9.4-pistachio-marduk_gcc-5.2.0_musl-1.1.11.Linux-x86_64.tar.bz2
+1. First download the latest SDK from https://downloads.creatordev.io/pistachio/marduk/ e.g. say  OpenWrt-SDK-0.9.4-pistachio-marduk_gcc-5.2.0_musl-1.1.11.Linux-x86_64.tar.bz2 is the latest SDK available.
 2. Extract the SDK and go to the extracted folder.
 
           tar -xjvf OpenWrt-SDK-0.9.4-pistachio-marduk_gcc-5.2.0_musl-1.1.11.Linux-x86_64.tar.bz2
