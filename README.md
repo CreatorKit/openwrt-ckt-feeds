@@ -24,18 +24,18 @@ Command                                         | Description
           tar -xjvf OpenWrt-SDK-0.9.4-pistachio-marduk_gcc-5.2.0_musl-1.1.11.Linux-x86_64.tar.bz2
           cd OpenWrt-SDK-0.9.4-pistachio-marduk_gcc-5.2.0_musl-1.1.11.Linux-x86_64.tar.bz2
 3. Check whether the feeds.conf.default file has an entry of https://github.com/CreatorKit/openwrt-ckt-feeds.git
-4. Update and install the openwrt-ckt-feeds by 
+4. Update all the feeds and install the required one from openwrt-ckt-feeds. e.g. if you want to install just button-led-controller then
 
-          ./scripts/feeds update ckt
-          ./scripts/feeds install ckt
-5. You can build a specific package from the above list
+          ./scripts/feeds update -a
+          ./scripts/feeds install xyz
+5. You can build just the specific package as
 
-          make package/xyz/compile
+          make package/button-led-controller/compile
 6. Once the package is built successfully, it's .ipk files are generated in the bin/pistachio directory.
 7. To copy the .ipk files on to the Ci40 board which is running the CreatorDev/openwrt image, you can either scp them or first copy them on a USB stick, connect the stick to the board, mount it and copy the files in /tmp folder.
 8. You can install the ipk by using 
 
-          root@OpenWrt:/# opkg install /tmp/xyz.ipk
+          root@OpenWrt:/# opkg install /tmp/button-led-controller_HEAD-1_pistachio.ipk
 9. However, please note that if a package requires some dependent packages, then those need to be installed first, only then a package can be installed using opkg. Since SDK is a stripped down version, Package.gz is not getting generated and opkg update would fail.
 10. e.g. if you want change something in say "button-led-controller", then it would be good to install the default "button-led-controller" using opkg on the Vanila CreatorDev/Openwrt image first. i.e.
 
