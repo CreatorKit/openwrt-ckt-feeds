@@ -27,7 +27,7 @@ Command                                         | Description
 4. Update all the feeds and install the required one from openwrt-ckt-feeds. e.g. if you want to install just button-led-controller then
 
           ./scripts/feeds update -a
-          ./scripts/feeds install xyz
+          ./scripts/feeds install button-led-controller
 5. You can build just the specific package as
 
           make package/button-led-controller/compile
