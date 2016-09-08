@@ -47,3 +47,11 @@ Command                                         | Description
           root@OpenWrt:/# opkg install /tmp/button-led-controller_HEAD-1_pistachio.ipk
 You can follow this approach for building any other packages using OpenWrt SDK.
 12. For more details about how to use openwrt sdk please refer https://wiki.openwrt.org/doc/howto/obtain.firmware.sdk
+
+----
+
+## Contributing
+
+We welcome all contributions to this project and we give credit where it's due. Anything from enhancing functionality to improving documentation and bug reporting - it's all good.
+
+For more details about the Contributor's guidelines, refer to the [contributor guide](https://github.com/CreatorKit/creator-docs/blob/master/ContributorGuide.md).
